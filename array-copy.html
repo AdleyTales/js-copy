@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+        // 数组的浅拷贝 会改变引用的值
+        var arrA = [1,2,3,4,5,6,7];
+    		var arrB = arrA; //复制的是栈内存中的地址
+    		arrB[2] = 20000;
+
+    		console.log(arrA); // [1, 2, 20000, 4, 5, 6, 7]
+
+    </script>
+  </body>
+</html>

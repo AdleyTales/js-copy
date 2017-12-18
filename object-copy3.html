@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+      var obj = {
+        name: 'xiaoming',
+        age: 18,
+        job: 'Program Developer'
+      }
+
+      var obj3;
+      obj3 = JSON.parse(JSON.stringify(obj));
+
+      console.log(obj3); // {name: "xiaoming", age: 18, job: "Program Developer"}
+
+      obj3.age = 26;
+      console.log(obj); //{name: "xiaoming", age: 18, job: "Program Developer"}
+      console.log(obj3); //{name: "xiaoming", age: 26, job: "Program Developer"}
+
+    </script>
+  </body>
+</html>

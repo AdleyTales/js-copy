@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+      var obj = {
+        name: 'xiaoming',
+        age: 18,
+        job: 'Program Developer'
+      }
+
+      var obj2 = {};
+      for(var item in obj){
+        obj2[item] = obj[item];
+      }
+      console.log(obj2); // {name: "xiaoming", age: 18, job: "Program Developer"}
+
+      obj2.age = 24;
+      console.log(obj); // {name: "xiaoming", age: 18, job: "Program Developer"}
+      console.log(obj2); // {name: "xiaoming", age: 24, job: "Program Developer"}
+
+
+    </script>
+  </body>
+</html>

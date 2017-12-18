@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+        // 数组的深拷贝
+        var arrA = [1,2,3,4,5,6,7];
+
+        // 2. join('').split('')
+    		var arrD;
+            arrD = arrA.join('').split('');
+
+        console.log(arrD); // ["1", "2", "3", "4", "5", "6", "7"]
+
+        // 针对此类型 number
+        arrD = arrD.map(function(item){
+          return Number(item);
+        });
+        console.log(arrD); //[1, 2, 3, 4, 5, 6, 7];
+
+        arrD[2] = 40000;
+        console.log('arrA:',arrA); // [1, 2, 3, 4, 5, 6, 7]
+        console.log('arrD:',arrD); // [1, 2, 40000, 4, 5, 6, 7]
+
+
+    </script>
+  </body>
+</html>
